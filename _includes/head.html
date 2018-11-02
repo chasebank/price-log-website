@@ -3,9 +3,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <title>{{ site.title | escape }} - {% if page.title %}{{ page.title | escape }}{% else %}{{ site.description | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+  <meta property="og:site_name" content="Price Log">
+  <meta property="og:title" content="Price Log - Feedback & Support">
+  <meta property="og:description" content="A mobile app that helps you compare prices and save money!">
+  <meta property="og:image" content="http://www.pricelogapp.com/images/thumbnail-landscape.jpg">
+  <meta property="og:url" content="http://www.pricelogapp.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://www.pricelogapp.com/images/thumbnail-landscape.jpg" />
+  <meta name="twitter:image:alt" content="Price Log app image">
+  <meta name="twitter:site" content="@chase_whiteside">
+ 
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">

@@ -1,0 +1,103 @@
+.contact-page {
+  position: relative;
+  background:
+    // linear-gradient(to right, color(green,dark), #159566, rgba(color(green,base), .5) 50%, rgba(#80F5C5,0) 75% ),
+    // linear-gradient(to right, #284042, hsla(161, 64%, 21%, 0.92), hsla(159, 100%, 21%, 0.54) 50%, rgba(0, 95, 68, 0.2) 75%),
+    // linear-gradient(to right, color(green,dark), #159566, rgba(color(green,base), .5) 50%, rgba(#80F5C5,0) 75% ),
+    // linear-gradient(to right, #284042, hsla(165, 75%, 19%, 0.83), hsla(163, 100%, 32%, 0.24) 50%, hsla(165, 85%, 72%, 0) 75%),
+    // linear-gradient(to right, color(green,dark), rgba(color(green,base), 1) 25%, rgba(color(green,base), 0) 75% ),
+    // linear-gradient(to top, rgba(white,.6), rgba(color(green,base),.3) 25%, rgba(color(green,base),0) 50%),
+    // black;
+    // url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/pricelog-gradient--to-right.png) top left repeat-y;
+    linear-gradient(to right, white, rgba(white,0) 60%),
+    url(#{$baseurl}/images/pricelog-gradient--to-right.png) top left repeat-y;
+    // url(http://www.pricelogapp.com/images/pricelog-store-bg.jpg) top right no-repeat;
+  background-size: 100% auto;
+  // background-size: 100%, cover;
+  // padding-top: 0;
+  // padding-bottom: 0;
+  // overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  
+  min-height: 100%;
+}
+
+.contact-page--content {
+  // background: red;
+  margin-left: 10vw;
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+  p {
+    letter-spacing: -.25px;
+    margin-top: 1.1rem;
+    color: color(green,dark);
+    
+    + p {
+      margin-top: 1rem;
+    }
+  }
+  
+//   .contact-page--content--text {
+//     background: white;
+//     flex-grow: 0;
+//     align-self: center;
+//     margin: auto;
+//     display: inline;
+
+//     // display: flex;
+//     // flex-wrap: wrap;
+//     // align-self: flex-start;
+//   }
+  
+  svg {
+    margin-bottom: 0;
+  }
+}
+
+.contact-page--header {
+  color: color(green,baseContrast);
+  line-height: 1;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-page--form {
+  // background: yellow;
+  width: 40vw;
+  margin-left: 10vw;
+}
+
+
+
+@media (max-width: $small) {
+  .contact-page {
+    background:
+    // url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/pricelog-gradient--to-bottom.png) top left repeat-x;
+    linear-gradient(to bottom, white, rgba(white,0) 60%),
+    url(#{$baseurl}/images/pricelog-gradient--to-bottom.png) top left repeat-x,
+    ;
+  background-size: auto 100%;
+    flex-direction: column;
+  }
+  
+  .contact-page--content {
+    margin: 0;
+    width: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  
+  .contact-page--form {
+    margin-top: 10vw;
+    flex: 1;
+    margin-left: 0;
+    width: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}

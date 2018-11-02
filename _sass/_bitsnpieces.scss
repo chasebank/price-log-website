@@ -1,0 +1,29 @@
+@function between($to, $from, $toWidth, $fromWidth) {
+  $slope: ($to - $from) / ($toWidth - $fromWidth);
+  $base: $from - $slope * $fromWidth;
+
+  @return calc(#{$base} + #{100vw * $slope});
+}
+
+$small: 550px;
+$large: 1600px;
+
+$colors: (
+  green:
+    (
+      base: #00eda0,
+      baseContrast: #00c18d,
+      dark: #284042,
+      mid: #aabdb2,
+      light: #afffcc
+    )
+);
+
+@function color($color-name, $color-variant:null) {
+  @if ($color-variant !=null) {
+    @return map-get(map-get($colors, $color-name), $color-variant);
+  }
+  @else {
+    @return map-get($colors, $color-name);
+  }
+}

@@ -1,0 +1,696 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  -webkit-overflow-scrolling: touch;
+  background: color(green,baseContrast)
+  // background: linear-gradient(#f2fef6 40%, color(green, dark) 60%);
+}
+
+#content {
+  flex-grow: 2;
+  height: 85%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  background: linear-gradient(to top,
+      rgba(color(green, base), .6),
+      rgba(color(green, base), 0) 8rem
+    ),
+    linear-gradient(to top,
+      rgba(white, 1),
+      rgba(white, .5) 20%,
+      rgba(white, .5) 80%,
+      #f2fef6
+    ),
+    url('http://www.pricelogapp.com/images/header-bg.jpg');
+  background-size: cover;
+  background-position: bottom center;
+  height: 105%;
+  min-height: 23rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    background: linear-gradient(
+      to top,
+      color(green, base) 5%,
+      rgba(color(green, base), 0) 6rem
+    );
+    z-index: 10;
+  }
+}
+
+.logo-wrap {
+  padding-top: 2rem;
+  min-height: 8rem;
+  flex: 2;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+    
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      width: 80%;
+      height: 60%;
+      background: white;
+      z-index: -1;
+      border-radius: 2rem;
+      box-shadow: 0 0 1rem 1rem white, 0 0 4rem white;
+      opacity: .75;
+    }
+  }
+
+  h3 {
+    margin-top: .5rem;
+    color: color(green, dark);
+    text-shadow: 0 0 .5rem white, 0 0 1rem white, 0 0 2rem white;
+  }
+}
+
+#price-log-logo {
+  display: block;
+  height: 7rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+$phoneMockupHeight: 30rem;
+.phone-wrap {
+  position: relative;
+  height: $phoneMockupHeight * .8;
+  height: calc(#{$phoneMockupHeight} - 2vmax);
+}
+
+#phonesvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.phone {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  $height: 30rem;
+  height: $height;
+  width: $height * .9538;
+  max-height: 737px;
+  max-width: 703px;
+  transform: translateX(60%);
+  // background: url('http://www.pricelogapp.com/images/phone-in-hand-optim.png')
+  //   top
+  //   center
+  //   no-repeat;
+  background-size: cover;
+  perspective: 100rem;
+}
+
+.phone-screen {
+  background: url('http://www.pricelogapp.com/images/app-screenshot.jpg');
+  background-size: 100% 100%;
+  position: absolute;
+  top: 2.7%;
+  left: 22.5%;
+  height: 62.75%;
+  width: 33%;
+  transform: rotateX(22deg) rotateY(13deg) rotateZ(-31deg) skew(8deg);
+  perspective: 1000px;
+  perspective-origin: 0% 50%;
+  border-radius: .1rem;
+  mix-blend-mode: multiply;
+}
+
+#mobile-scroll-hint {
+  display: block;
+  position: absolute;
+  top: -2.5rem;
+  left: 1rem;
+  width: 2rem;
+  height: 2rem;
+  transform: rotate(180deg);
+  z-index: 100;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: scroll-hint 1s ease-in-out infinite;
+  }
+}
+
+@keyframes scroll-hint {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+}
+
+
+
+section {
+  padding-top: calc(3rem + 1.5vw);
+  padding-bottom: calc(3rem + 1.5vw);
+}
+
+.section-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.block-header {
+  position: relative;
+  height: 2rem;
+  margin: 0;
+  width: 100%;
+  border-width: 2.5rem;
+  border-style: solid;
+  border-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='90px' height='90px' viewBox='0.5 100.5 90 90'><path fill='" + #284042 + "' d='M60.498,100.5H30.5c-23.312,0.316-29.683,6.688-30,30v30.001c0.317,23.312,6.688,29.684,30,29.999h29.998 c23.313-0.315,29.685-6.688,30.002-29.999V130.5C90.183,107.187,83.811,100.816,60.498,100.5z'/></svg>")
+    30
+    fill
+    stretch;
+  z-index: 10;
+
+  h2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+    color: white;
+  }
+}
+
+.block {
+  display: relative;
+}
+
+.block-content {
+  position: relative;
+  padding: calc(2rem + 1.5vw)
+    calc(1rem + 1.5vw)
+    calc(1rem + 1.5vw)
+    calc(1rem + 1.5vw);
+  padding-top: calc(2.5rem + 1.5vw);
+  padding-bottom: calc(1.5rem + 1.5vw);
+  margin-top: -1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  box-shadow: 0px 80px 100px -40px rgba(color(green, dark), .5),
+    0px 10px 20px rgba(color(green, dark), .25);
+
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -3.1rem;
+    left: -1rem;
+    right: -1rem;
+    height: 4rem;
+    border-radius: 2rem;
+    box-shadow: 0px 20px 50px -20px rgba(color(green, dark), .5),
+      0px 5px 20px rgba(color(green, dark), .5);
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    + p {
+      margin-top: 1em;
+    }
+  }
+}
+
+
+
+.section-intro {
+  padding-top: 0;
+  background-color: color(green, base);
+
+  .section-content {
+    max-width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+  }
+}
+
+.section-intro_block-content {
+  color: color(green, baseContrast);
+  background-color: white;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.section-pitch {
+  background-color: white;
+}
+
+.section-pitch_block {
+  max-width: 35rem;
+  margin-left: auto;
+}
+
+.section-pitch_block-content {
+  color: white;
+  background-color: color(green, baseContrast);
+  text-shadow: 0 0 2rem rgba(color(green, dark), .75);
+}
+
+.section-pitchv2 {
+  position: relative;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.image {
+  // width: 100%;
+  // padding-top: 150%;
+}
+
+.section-pitchv2_content {
+  max-width: 35rem;
+  width: 50%;
+  color: color(green, dark);
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  h2 {
+    color: color(green,baseContrast);
+    margin-top: 0
+  }
+}
+
+.section-example {
+  background-color: color(green, dark);
+  color: white;
+
+  .section-content {
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 {
+    color: color(green, base);
+    margin-top: 0;
+  }
+}
+
+
+
+.section-process_section-content {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding-right: 5%;
+
+  .section-title {
+    min-width: 15rem;
+    flex: 2;
+  }
+
+  h2 {
+    position: relative;
+    text-align: center;
+    font-size: 2.4rem;
+    max-width: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    left: -1rem;
+
+    &:after {
+      display: block;
+      content: '>';
+      font-size: 2rem;
+      position: absolute;
+      right: -.5rem;
+      top: 50%;
+      transform: translateY(-50%) scaleY(4);
+      color: color(green, light);
+    }
+  }
+}
+
+.section-process_section-content {
+  display: flex;
+  justify-content: stretch;
+}
+
+.section-tagline {
+  background-color: color(green, dark);
+  text-align: center;
+
+  // normal section padding - top padding of footer
+  padding-bottom: calc((3rem + 1.5vw) - (4.5rem * .15));
+
+  .section-title {
+    color: white;
+  }
+  .tagline {
+    color: color(green, base);
+    margin-bottom: 0;
+  }
+}
+
+.section-process {
+  background: linear-gradient(to bottom, color(green,baseContrast), color(green, base));
+
+  ul {
+    position: relative;
+    padding: 1.75rem 1rem 2.5rem 4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    list-style: none;
+    counter-reset: item;
+
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      right: 0;
+      bottom: 0;
+    }
+
+    &:before {
+      background-color: white;
+      box-shadow: 0px 80px 100px -40px rgba(color(green, dark), .5),
+        0px 10px 20px rgba(color(green, dark), .25);
+    }
+  }
+
+  li {
+    position: relative;
+    line-height: 1.4;
+    color: color(green, baseContrast);
+    font-size: 1.2rem;
+
+    &:before {
+      display: block;
+      content: counter(item)'.';
+      counter-increment: item;
+      font-weight: bold;
+      position: absolute;
+      top: -.5em;
+      left: -3.75rem;
+      width: 2.5rem;
+      text-align: center;
+      font-size: 1.75em;
+      color: white;
+      z-index: 100;
+    }
+
+    + li {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.list-wrap {
+  position: relative;
+
+  &:before, &:after {
+    display: block;
+    content: '';
+    position: absolute;
+  }
+
+  &:before {
+    top: -1rem;
+    width: 3rem;
+    left: 0rem;
+    bottom: .8rem;
+    border-width: 1.5rem;
+    border-style: solid;
+    border-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='90px' height='90px' viewBox='0.5 100.5 90 90'><path fill='" +
+        #284042 +
+        "' d='M60.498,100.5H30.5c-23.312,0.316-29.683,6.688-30,30v30.001c0.317,23.312,6.688,29.684,30,29.999h29.998 c23.313-0.315,29.685-6.688,30.002-29.999V130.5C90.183,107.187,83.811,100.816,60.498,100.5z'/></svg>")
+      30
+      fill
+      stretch;
+    z-index: 2;
+  }
+
+  &:after {
+    width: 2.8rem;
+    top: -.8rem;
+    left: .05rem;
+    bottom: .9rem;
+    background: color(green, dark);
+    border-radius: 1.25rem;
+    box-shadow: 0px 1rem 2rem -.25rem color(green, dark);
+    z-index: 1;
+  }
+}
+
+@media (max-width: $small) {
+  .section-process {
+    background: linear-gradient(
+      to bottom,
+      color(green, baseContrast),
+      color(green, base)
+    );
+  }
+  .section-process_section-content {
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    h2 {
+      font-size: 1.5em;
+      max-width: 100%;
+      margin-top: 0;
+      left: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .block-process {
+      width: 100%;
+    }
+  }
+
+  .app-download-badges {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section-pitchv2 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .carousel {
+    width: 100%;
+    flex: none;
+  }
+
+  .carousel-cell {
+    margin-bottom: 3.2rem;
+  }
+
+  .section-pitchv2_content {
+    width: 100%;
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  header {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo-wrap {
+    padding-top: 0;
+    flex: 2;
+  }
+
+  .phone-wrap {
+    width: 40%;
+    height: 100%;
+  }
+
+  .phone {
+    top: initial;
+    right: 5%;
+    bottom: 0;
+    transform: translateX(20%);
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    justify-content: center;
+  }
+
+  .logo-wrap {
+    flex: none;
+  }
+
+  .phone-wrap {
+    width: auto;
+    flex: none;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .phone {
+    position: relative;
+  }
+}
+
+@media (min-width: $small) {
+  .section-tagline {
+    .section-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    h2 {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    h3 {
+      margin-top: .2rem;
+    }
+  }
+}
+
+
+
+.section-contact {
+  position: relative;
+  background-color: color(green,base);
+  background: url(http://www.pricelogapp.com/images/pricelog-store-bg.jpg) top right no-repeat;
+
+  background-size: cover;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+
+  z-index: 100;
+}
+
+.contact-info {
+  position: relative;
+  background:
+    linear-gradient(to right, color(green,dark), #159566, rgba(color(green,base), .5) 50%, rgba(#80F5C5,0) 75% ),
+    linear-gradient(to top, rgba(white,.6), rgba(color(green,base),.3) 25%, rgba(color(green,base),0) 50%);
+  text-align: center;
+  padding-top: calc(3rem + 1.5vw);
+  padding-bottom: calc(2.5rem + 1.5vw);
+  z-index: 1;
+}
+
+.contact-info--logo {
+  width: 15rem;
+  filter: drop-shadow(0 .2rem 1rem white);
+  margin-bottom: calc(1.5rem + .75vw);
+}
+
+#woman-with-phone {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  height: calc(100% + 2px);
+  width: auto;
+}
+
+#contact-button--wrap {
+  height: 4.5rem;
+  display: block;
+}
+
+#contact-button {
+  height: 70%;
+  width: auto;
+}
+
+@media (max-width: $small) {
+  .section-contact {
+    background-position: top right 15%;
+  }
+  
+  .contact-info {
+    padding-bottom: calc(1.5rem + .75vw);
+  }
+  
+  #woman-with-phone {
+    width: 100%;
+    height: auto;
+  }
+  
+  .contact-info {
+    padding-top: 75vw;
+    background: linear-gradient(to bottom, rgba(color(green,base),0) 40%, rgba(color(green,base),.5) 55%, white 75%)
+  }
+}

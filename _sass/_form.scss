@@ -1,0 +1,40 @@
+form {
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  margin-top: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+input[type="email"] {
+  display: block;
+  width: 100%;
+  border: 2px solid color(green,dark);
+  border-radius: .75rem;
+  padding: .75rem;
+  text-align: center;
+}
+
+input[type="submit"] {
+  display: block;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  line-height: 2.5;
+  border-radius: .7rem;
+  background-color: color(green,baseContrast);
+  color: white;
+  border: 0;
+  font-weight: bold;
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}

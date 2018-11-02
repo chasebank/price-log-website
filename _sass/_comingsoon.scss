@@ -1,0 +1,93 @@
+.coming-soon {
+  height: initial;
+  min-height: 100%
+}
+
+.coming-soon-header {
+  padding: 0 4vw 4vw 4vw;
+  height: initial;
+  min-height: 100%;
+  background: linear-gradient(to top,
+      rgba(color(green, base), 1),
+      rgba(color(green, base), 0) 30%
+    ),
+    linear-gradient(to top,
+      rgba(white, 1),
+      rgba(white, .5) 20%,
+      rgba(white, .5) 80%,
+      #f2fef6
+    ),
+    url('http://www.pricelogapp.com/images/header-bg.jpg');
+  background-size: cover;
+  background-position: bottom center;
+  align-items: center;
+  
+  &:after {
+    display: none
+  }
+  
+  .logo-wrap {
+    flex: 2;
+    margin-right: 4vw;
+      
+    @media (max-width: 1000px) {
+      margin-right: 0
+    }
+  }
+}
+
+.section-coming-soon {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 30rem;
+  text-align: center;
+}
+
+.coming-soon-section-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  img {
+    position: relative;
+    top: .5rem;
+    height: 4rem;
+    margin-left: -.5rem;
+    
+    &.app-store-logo {
+      top: 0
+    }
+  }
+  
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: color(green,baseContrast)
+  }
+  
+  .tagline {
+    font-size: 1.65rem;
+    margin-top: 0;
+    line-height: 1;
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+}
+
+
+.coming-soon-content {
+  background-color: white;
+  padding: 6%;
+  border-radius: 2rem;
+  border: 3px solid white;
+  box-shadow:
+    inset 0 4rem 4rem rgba(white,.75),
+    inset 0 0 2.5rem rgba(color(green,base),.25),
+    // 0 .25rem .75rem color(green,dark),
+    0 1.75rem 2.5rem -1rem rgba(color(green,dark),.5);
+  color: color(green,dark);
+}
