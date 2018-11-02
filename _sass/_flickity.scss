@@ -34,7 +34,7 @@
 }
 
 .carousel-cell {
-  background-image: url(http://www.pricelogapp.com/images/pricelog-screenshot-1.jpg);
+  background-image: url(#{$baseurl}/images/pricelog-screenshot-1.jpg);
   background-size: cover;
   width: 40%;
   margin-right: 6%;
@@ -45,19 +45,19 @@
   overflow: hidden;
   
   &:nth-of-type(2) {
-    background-image: url(http://www.pricelogapp.com/images/pricelog-screenshot-2.jpg);
+    background-image: url(#{$baseurl}/images/pricelog-screenshot-2.jpg);
   }
 
   &:nth-of-type(3) {
-    background-image: url(http://www.pricelogapp.com/images/pricelog-screenshot-3.jpg);
+    background-image: url(#{$baseurl}/images/pricelog-screenshot-3.jpg);
   }
 
   &:nth-of-type(4) {
-    background-image: url(http://www.pricelogapp.com/images/pricelog-screenshot-4.jpg);
+    background-image: url(#{$baseurl}/images/pricelog-screenshot-4.jpg);
   }
   
   &:nth-of-type(5) {
-    background-image: url(http://www.pricelogapp.com/images/pricelog-screenshot-5.jpg);
+    background-image: url(#{$baseurl}/images/pricelog-screenshot-5.jpg);
   }
   
   img {
