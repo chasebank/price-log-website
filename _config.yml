@@ -9,7 +9,7 @@
 title: Price Log
 email: pricelogapp@gmail.com
 description: A Journal For Your Prices.
-baseurl: "/jekyll" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "/" # the base hostname & protocol for your site
 
 # Build settings
