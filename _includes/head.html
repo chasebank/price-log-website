@@ -7,12 +7,12 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <meta property="og:site_name" content="Price Log">
-  <meta property="og:title" content="Price Log - Feedback & Support">
-  <meta property="og:description" content="A mobile app that helps you compare prices and save money!">
-  <meta property="og:image" content="http://www.pricelogapp.com/images/thumbnail-landscape.jpg">
-  <meta property="og:url" content="http://www.pricelogapp.com">
+  <meta property="og:title" content="{{ site.title | escape }} - {% if page.title %}{{ page.title | escape }}{% else %}{{ site.description | escape }}{% endif %}">
+  <meta property="og:description" content="An app that helps you compare prices and save money!">
+  <meta property="og:image" content="{{ site.baseurl }}/images/thumbnail-landscape.jpg">
+  <meta property="og:url" content="http://www.pricelog.app">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://www.pricelogapp.com/images/thumbnail-landscape.jpg" />
+  <meta name="twitter:image" content="{{ site.baseurl }}/images/thumbnail-landscape.jpg" />
   <meta name="twitter:image:alt" content="Price Log app image">
   <meta name="twitter:site" content="@chase_whiteside">
  
