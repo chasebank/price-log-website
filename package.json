@@ -1,0 +1,17 @@
+{
+  "name": "price-log-website",
+  "version": "1.0.0",
+  "description": "Website for Price Log mobile app",
+  "author": "Chase Whiteside",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
