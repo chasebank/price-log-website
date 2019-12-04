@@ -1,0 +1,33 @@
+@function between($to, $from, $toWidth, $fromWidth) {
+  $slope: ($to - $from) / ($toWidth - $fromWidth);
+  $base: $from - $slope * $fromWidth;
+
+  @return calc(#{$base} + #{100vw * $slope});
+}
+
+$small: 550px;
+$large: 1600px;
+
+$colors: (
+  green:
+    (
+      base: #00eda0,
+      baseContrast: #00c18d,
+      dark: #284042,
+      mid: #aabdb2,
+      light: #afffcc
+    )
+);
+
+@function color($color-name, $color-variant:null) {
+  @if ($color-variant !=null) {
+    @return map-get(map-get($colors, $color-name), $color-variant);
+  }
+  @else {
+    @return map-get($colors, $color-name);
+  }
+}
+
+@mixin squircleMask($size) {
+  mask-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" height="100%25" width="100%25"><mask id="squircle"><rect fill="white" width="100%25" height="100%25"/><svg x="-.01%25" style="overflow: visible"><path fill="black" width="' + $size + '" height="' + $size + '" d="M' + $size + ' 0H0v' + $size + 'C0 ' + $size * .2 + ' ' + $size * .2 + ' 0 ' + $size + ' 0z"/></svg><svg x="100.01%25" style="overflow: visible"><path fill="black" d="M' + $size + ' ' + $size + 'V0H0c' + $size * .8 + ' 0 ' + $size + ' ' + $size * .2 + ' ' + $size + ' ' + $size + 'z" transform="translate(-' + $size + ',0)"/></svg><svg x="100.01%25" y="100.01%25" style="overflow: visible"><path fill="black" d="M0 ' + $size + 'h' + $size + 'V0c0 ' + $size * .8 + '-' + $size * .2 + ' ' + $size + '-' + $size + ' ' + $size + 'z" transform="translate(-' + $size + ',-' + $size + ')"/></svg><svg x="-.01%25" y="100.01%25" style="overflow: visible"><path fill="black" d="M0 0v' + $size + 'h' + $size + 'C' + $size * .2 + ' ' + $size + ' 0 ' + $size * .8 + ' 0 0z" transform="translate(0,-' + $size + ')"/></svg></mask><rect fill="white" width="100%25" height="100%25" mask="url(%23squircle)"/></svg>')
+}
