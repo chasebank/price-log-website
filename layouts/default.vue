@@ -212,15 +212,6 @@ section {
     justify-content: center;
   }
 
-  .carousel {
-    width: 100%;
-    flex: none;
-  }
-
-  .carousel-cell {
-    margin-bottom: 3.2rem;
-  }
-
   .section-pitchv2_content {
     width: 100%;
     margin-top: 3rem;

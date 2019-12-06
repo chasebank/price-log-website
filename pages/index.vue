@@ -11,14 +11,28 @@
         </div>
       </div>
     </section>
+    <!-- <img :srcset="require(`~/assets/images/${this.imageURL}?disable=true`).srcSet" alt=""> -->
     <section class="section-pitchv2">
-      <div class="carousel" data-flickity='{ "wrapAround": false }'>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-      </div>
+      <client-only>
+        <div class="carousel" data-flickity='{ "wrapAround": false }'>
+          <div class="carousel-cell">
+            <img src="http://www.pricelogapp.com/images/pricelog-screenshot-1.jpg" alt="">
+          </div>
+          <div class="carousel-cell">
+            <img src="http://www.pricelogapp.com/images/pricelog-screenshot-1.jpg" alt="">
+          </div>
+          <div class="carousel-cell">
+            <img src="http://www.pricelogapp.com/images/pricelog-screenshot-1.jpg" alt="">
+          </div>
+          <div class="carousel-cell">
+            <img src="http://www.pricelogapp.com/images/pricelog-screenshot-1.jpg" alt="">
+          </div>
+          <div class="carousel-cell">
+            <img src="http://www.pricelogapp.com/images/pricelog-screenshot-1.jpg" alt="">
+          </div>
+        </div>
+      </client-only>
+
       <div class="section-content section-pitchv2_content">
         <h2>"A dollar saved is a dollar&nbsp;earned!"</h2>
         <p>Prices change from store to store and day to day. The differences are often small and hard to notice, but it all&nbsp;adds&nbsp;up!</p>
@@ -70,9 +84,7 @@
       </div>
     </section>
 
-    <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe-ui-default.min.js"></script>
+    
   </div>
 </template>
 
@@ -150,39 +162,44 @@ export default {
   text-align: center;
 }
 
-.section-pitch {
-  background-color: white;
-}
 
-.section-pitch_block {
-  max-width: 35rem;
-  margin-left: auto;
-}
 
-.section-pitch_block-content {
-  color: white;
-  background-color: color(green, baseContrast);
-  text-shadow: 0 0 2rem rgba(color(green, dark), .75);
-}
+
+
+// .section-pitch {
+//   background-color: white;
+// }
+
+// .section-pitch_block {
+//   max-width: 35rem;
+//   margin-left: auto;
+// }
+
+// .section-pitch_block-content {
+//   color: white;
+//   background-color: color(green, baseContrast);
+//   text-shadow: 0 0 2rem rgba(color(green, dark), .75);
+// }
+
+
+
+
 
 .section-pitchv2 {
   position: relative;
   background-color: white;
   display: flex;
-  align-items: center;
-}
-
-
-
-.image {
-  // width: 100%;
-  // padding-top: 150%;
+  align-items: stretch;
+  // padding-top: 0;
+  // padding-bottom: 0;
+  // align-items: center;
 }
 
 .section-pitchv2_content {
   max-width: 35rem;
   width: 50%;
   color: color(green, dark);
+  // padding-bottom: calc(3rem + 1.5vw);
 
   p:first-of-type {
     margin-top: 0;
@@ -196,6 +213,161 @@ export default {
     margin-top: 0
   }
 }
+
+
+
+
+
+//
+// Carousel
+//
+
+.carousel {
+  --carouselOffset: 2rem;
+  // background-color: cyan;
+  flex: 2;
+  margin-left: 2%;
+  margin-right: 2%;
+  // margin-top: calc(var(--carouselOffset) * -1);
+
+  // height: calc(100% + (3rem * 2))
+  // height: calc(100% + 6rem);
+  // padding-top: calc(3rem + 1.5vw);
+  // padding-bottom: calc(3rem + 1.5vw);
+  // margin-bottom: 25px;
+  // display: flex;
+  // justify-content: stretch;
+  // align-items: stretch;
+  // height: calc(100% + 6rem)!important;
+  // overflow: hidden;
+}
+
+
+
+
+
+
+.flickity-viewport {
+  // background-color: magenta;
+  
+  -webkit-mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+          mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+  // height: 100%!important;
+  // --carouselOffset: 2rem;
+  margin-top: calc(var(--carouselOffset) * -1);
+  margin-bottom: calc(var(--carouselOffset) * -1);
+  height: calc(100% + (var(--carouselOffset) * 2))!important;
+  // width: 100%;
+  // flex: 1 0 100%;
+}
+
+.flickity-slider {
+  // padding-bottom: 3rem;
+}
+
+.flickity-page-dots {
+  bottom: calc(var(--carouselOffset) * -1)
+}
+
+
+
+
+.carousel-cell {
+  // background-image: url(#{$baseurl}/images/pricelog-screenshot-1.jpg);
+  // background-size: cover;
+  width: 30%;
+  margin-top: var(--carouselOffset);
+  margin-bottom: var(--carouselOffset);
+  height: calc(100% - (var(--carouselOffset) * 2));
+  margin-right: 10%;
+  // border-radius: 10px;
+  // padding-top: calc(3rem + 1.5vw);
+  // padding-bottom: calc(3rem + 1.5vw);
+  // padding-top: 71%;
+  
+  
+  // overflow: hidden;
+
+  object-fit: contain;
+
+  // &:before {
+  //   display: block;
+  //   content: '';
+  //   position: absolute;
+  //   top: 5%;
+  //   left: 10%;
+  //   width: 80%;
+  //   height: 95%;
+  //   background-color: red;
+  // }
+  
+  img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% - 1rem);
+    object-fit: contain;
+    filter: drop-shadow(0 .5rem 1rem rgba(color(green,dark),.5));
+  }
+  
+  // @media (max-width: $small) {
+  //   width: 60%;
+  //   padding-top: 106%;
+  // }
+}
+
+.flickity-prev-next-button {
+  background-color: white;
+  
+  .arrow {
+    fill: color(green,dark)
+  }
+}
+
+.flickity-page-dots .dot {
+  background: color(green,dark);
+  transition: all .3s ease-in-out;
+  
+  &.is-selected {
+    background: color(green,baseContrast);
+    box-shadow: 0 -2px 10px color(green,base)
+  }
+}
+
+
+// @media (max-width: 550px) {
+//   .carousel {
+//     flex: none!important;
+//   }
+// }
+
+// @media (max-width: 550px) {
+//   .flickity-viewport {
+//     -webkit-mask-image: none;
+//             mask-image: none;
+//   }
+// }
+
+// @media (max-width: 1000px) {
+//   .carousel {
+//     width: 100%;
+//     height: 30rem;
+//     flex: none;
+//   }
+
+//   .carousel-cell {
+//     margin-bottom: 3.2rem;
+//   }
+// }
+
+// @media (max-width: $small) {
+//   width: 60%;
+//   padding-top: 106%;
+// }
+
+
+
+
 
 .section-example {
   background-color: color(green, dark);
@@ -212,6 +384,8 @@ export default {
     margin-top: 0;
   }
 }
+
+
 
 
 
@@ -359,6 +533,9 @@ export default {
 }
 
 
+
+
+
 .section-contact {
   position: relative;
   background-color: color(green,base);
@@ -426,4 +603,7 @@ export default {
     background: linear-gradient(to bottom, rgba(color(green,base),0) 40%, rgba(color(green,base),.5) 55%, white 75%)
   }
 }
+
+
+
 </style>
