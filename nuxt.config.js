@@ -1,7 +1,7 @@
 const routerBase =
   process.env.DEPLOY_ENV === "GH_PAGES"
     ? {
-        base: "/chase/"
+        base: "/price-log-website/"
       }
     : {};
 
