@@ -134,10 +134,6 @@ $phoneMockupHeight: 30rem;
   max-height: 737px;
   max-width: 703px;
   transform: translateX(60%);
-  // background: url('http://www.pricelogapp.com/images/phone-in-hand-optim.png')
-  //   top
-  //   center
-  //   no-repeat;
   background-size: cover;
   perspective: 100rem;
 }

@@ -63,7 +63,6 @@ main {
 
 
 
-
 section {
   padding-top: $largePadding;
   padding-bottom: $largePadding;
@@ -73,38 +72,6 @@ section {
   padding-left: $mediumPadding;
   padding-right: $mediumPadding;
 }
-
-// .block-header {
-//   position: relative;
-//   height: 2rem;
-//   margin: 0;
-//   width: 100%;
-//   filter: drop-shadow(0rem 0.5rem 0.5rem rgba(0, 0, 0, .2));
-//   z-index: 10;
-
-//   &:before {
-//     @include squircleMask(25);
-//     background-color: color(green, dark);
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     z-index: -1;
-//   }
-
-//   h2 {
-//     position: absolute;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     width: 100%;
-//     margin-top: 0;
-//     margin-bottom: 0;
-//     line-height: 1;
-//     color: white;
-//   }
-// }
 
 .section-intro_block-header {
   position: relative;
@@ -144,19 +111,6 @@ section {
   margin-right: 1rem;
   box-shadow: 0px 80px 100px -40px rgba(color(green, dark), .5),
     0px 10px 20px rgba(color(green, dark), .25);
-
-  // &:before {
-  //   display: block;
-  //   content: '';
-  //   position: absolute;
-  //   top: -3.1rem;
-  //   left: -1rem;
-  //   right: -1rem;
-  //   height: 4rem;
-  //   border-radius: 2rem;
-  //   box-shadow: 0px 20px 50px -20px rgba(color(green, dark), .5),
-  //     0px 5px 20px rgba(color(green, dark), .5);
-  // }
 
   p {
     margin-top: 0;
@@ -220,7 +174,7 @@ section {
   }
 
   .phone-wrap {
-    width: 40%;
+    // width: 40%;
     height: 100%;
   }
 

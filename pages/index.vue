@@ -195,60 +195,6 @@ p:last-of-type {
 
 
 
-
-
-// .section-pitch {
-//   background-color: white;
-// }
-
-// .section-pitch_block {
-//   max-width: 35rem;
-//   margin-left: auto;
-// }
-
-// .section-pitch_block-content {
-//   color: white;
-//   background-color: color(green, baseContrast);
-//   text-shadow: 0 0 2rem rgba(color(green, dark), .75);
-// }
-
-
-
-
-
-// .section-pitchv2 {
-//   position: relative;
-//   background-color: white;
-//   display: flex;
-//   align-items: stretch;
-//   // padding-top: 0;
-//   // padding-bottom: 0;
-//   // align-items: center;
-// }
-
-// .section-pitchv2_content {
-//   max-width: 35rem;
-//   width: 50%;
-//   color: color(green, dark);
-//   // padding-bottom: calc(3rem + 1.5vw);
-
-//   p:first-of-type {
-//     margin-top: 0;
-//   }
-//   p:last-of-type {
-//     margin-bottom: 0;
-//   }
-  
-//   h2 {
-//     color: color(green,baseContrast);
-//     margin-top: 0
-//   }
-// }
-
-
-
-
-
 //
 // Carousel
 //
@@ -746,6 +692,12 @@ p:last-of-type {
 #contact-button {
   height: 70%;
   width: auto;
+  
+  @media (max-width: $small) {
+    width: 100%;
+    height: auto;
+    max-width: 12rem;
+  }
 }
 
 @media (max-width: $small) {
