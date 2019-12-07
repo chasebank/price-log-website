@@ -112,35 +112,66 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.block-header {
+  position: relative;
+  height: 2rem;
+  margin: 0;
+  width: 100%;
+  border-width: 2.5rem;
+  border-style: solid;
+  border-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='90px' height='90px' viewBox='0.5 100.5 90 90'><path fill='" +
+      #284042 +
+      "' d='M60.498,100.5H30.5c-23.312,0.316-29.683,6.688-30,30v30.001c0.317,23.312,6.688,29.684,30,29.999h29.998 c23.313-0.315,29.685-6.688,30.002-29.999V130.5C90.183,107.187,83.811,100.816,60.498,100.5z'/></svg>")
+    30
+    fill
+    stretch;
+  z-index: 10;
+
+  h2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+    color: white;
+  }
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.block {
+  display: relative;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.block-content {
+  position: relative;
+  padding: calc(2rem + 1.5vw)
+    calc(1rem + 1.5vw)
+    calc(1rem + 1.5vw)
+    calc(1rem + 1.5vw);
+  padding-top: calc(2.5rem + 1.5vw);
+  padding-bottom: calc(1.5rem + 1.5vw);
+  margin-top: -1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  box-shadow: 0px 80px 100px -40px rgba(color(green, dark), .5),
+    0px 10px 20px rgba(color(green, dark), .25);
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    + p {
+      margin-top: 1em;
+    }
+  }
 }
 
-.links {
-  padding-top: 15px;
+p:first-of-type {
+  margin-top: 0;
+}
+p:last-of-type {
+  margin-bottom: 0;
 }
 
 .section-intro {
@@ -185,34 +216,34 @@ export default {
 
 
 
-.section-pitchv2 {
-  position: relative;
-  background-color: white;
-  display: flex;
-  align-items: stretch;
-  // padding-top: 0;
-  // padding-bottom: 0;
-  // align-items: center;
-}
+// .section-pitchv2 {
+//   position: relative;
+//   background-color: white;
+//   display: flex;
+//   align-items: stretch;
+//   // padding-top: 0;
+//   // padding-bottom: 0;
+//   // align-items: center;
+// }
 
-.section-pitchv2_content {
-  max-width: 35rem;
-  width: 50%;
-  color: color(green, dark);
-  // padding-bottom: calc(3rem + 1.5vw);
+// .section-pitchv2_content {
+//   max-width: 35rem;
+//   width: 50%;
+//   color: color(green, dark);
+//   // padding-bottom: calc(3rem + 1.5vw);
 
-  p:first-of-type {
-    margin-top: 0;
-  }
-  p:last-of-type {
-    margin-bottom: 0;
-  }
+//   p:first-of-type {
+//     margin-top: 0;
+//   }
+//   p:last-of-type {
+//     margin-bottom: 0;
+//   }
   
-  h2 {
-    color: color(green,baseContrast);
-    margin-top: 0
-  }
-}
+//   h2 {
+//     color: color(green,baseContrast);
+//     margin-top: 0
+//   }
+// }
 
 
 
@@ -221,118 +252,251 @@ export default {
 //
 // Carousel
 //
+.section-pitchv2 {
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
 .carousel {
-  --carouselOffset: 2rem;
-  // background-color: cyan;
   flex: 2;
-  margin-left: 2%;
-  margin-right: 2%;
-  // margin-top: calc(var(--carouselOffset) * -1);
-
-  // height: calc(100% + (3rem * 2))
-  // height: calc(100% + 6rem);
-  // padding-top: calc(3rem + 1.5vw);
-  // padding-bottom: calc(3rem + 1.5vw);
-  // margin-bottom: 25px;
-  // display: flex;
-  // justify-content: stretch;
-  // align-items: stretch;
-  // height: calc(100% + 6rem)!important;
-  // overflow: hidden;
-}
-
-
-
-
-
-
-.flickity-viewport {
-  // background-color: magenta;
-  
-  -webkit-mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
-          mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
-  // height: 100%!important;
-  // --carouselOffset: 2rem;
-  margin-top: calc(var(--carouselOffset) * -1);
-  margin-bottom: calc(var(--carouselOffset) * -1);
-  height: calc(100% + (var(--carouselOffset) * 2))!important;
-  // width: 100%;
-  // flex: 1 0 100%;
-}
-
-.flickity-slider {
-  // padding-bottom: 3rem;
+  max-width: 30rem;
+  // margin-left: 2%;
+  // margin-right: 2%;
+  margin: $mediumPadding 2%;
 }
 
 .flickity-page-dots {
-  bottom: calc(var(--carouselOffset) * -1)
+  bottom: 0;
 }
 
+.flickity-viewport {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 30%,
+    black 70%,
+    transparent
+  );
 
-
+  @media (max-width: $small) {
+    mask-image: none;
+  }
+}
 
 .carousel-cell {
-  // background-image: url(#{$baseurl}/images/pricelog-screenshot-1.jpg);
-  // background-size: cover;
-  width: 30%;
-  margin-top: var(--carouselOffset);
-  margin-bottom: var(--carouselOffset);
-  height: calc(100% - (var(--carouselOffset) * 2));
-  margin-right: 10%;
-  // border-radius: 10px;
-  // padding-top: calc(3rem + 1.5vw);
-  // padding-bottom: calc(3rem + 1.5vw);
-  // padding-top: 71%;
-  
-  
+  background-size: cover;
+  width: 40%;
+  margin-right: 6%;
+  border-radius: 5px;
+  padding-top: 71%;
+  // box-shadow: 0 1.5rem 2.4rem -1rem color(green, dark);
+  // filter: drop-shadow(0 .5rem 1rem rgba(color(green, dark),.5)) drop-shadow(0 .75rem 1rem rgba(color(green, baseContrast),.25));
+  margin-bottom: 3rem;
   // overflow: hidden;
 
-  object-fit: contain;
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 95%;
+    background-color: white;
+    filter: drop-shadow(0 .5rem 1rem rgba(color(green, dark),.5)) drop-shadow(0 .75rem 1rem rgba(color(green, baseContrast),.25));
+    z-index: -1;
+  }
 
-  // &:before {
-  //   display: block;
-  //   content: '';
-  //   position: absolute;
-  //   top: 5%;
-  //   left: 10%;
-  //   width: 80%;
-  //   height: 95%;
-  //   background-color: red;
-  // }
-  
   img {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
-    height: calc(100% - 1rem);
+    height: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 .5rem 1rem rgba(color(green,dark),.5));
   }
-  
-  // @media (max-width: $small) {
-  //   width: 60%;
-  //   padding-top: 106%;
-  // }
+
+  @media (max-width: $small) {
+    width: 60%;
+    padding-top: 106%;
+  }
 }
 
 .flickity-prev-next-button {
   background-color: white;
-  
+
   .arrow {
-    fill: color(green,dark)
+    fill: color(green, dark);
   }
 }
 
 .flickity-page-dots .dot {
-  background: color(green,dark);
+  background: color(green, dark);
   transition: all .3s ease-in-out;
-  
+
   &.is-selected {
-    background: color(green,baseContrast);
-    box-shadow: 0 -2px 10px color(green,base)
+    background: color(green, baseContrast);
+    box-shadow: 0 -2px 10px color(green, base);
   }
 }
+
+.section-pitchv2_content {
+  flex: 1 1 50%;
+  max-width: 30rem;
+  // width: 50%;
+  color: color(green, dark);
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    color: color(green, baseContrast);
+    margin-top: 0;
+  }
+}
+
+
+
+
+@media (max-width: 1000px) {
+  .carousel {
+    width: 100%;
+    flex: none;
+  }
+
+  .carousel-cell {
+    margin-bottom: 3.2rem;
+  }
+
+  // .section-pitchv2_content {
+  //   width: 100%;
+  //   margin-top: 3rem;
+  // }
+}
+
+
+
+
+
+// .carousel {
+//   --carouselOffset: 2rem;
+//   // background-color: cyan;
+//   flex: 2;
+//   margin-left: 2%;
+//   margin-right: 2%;
+//   // margin-top: calc(var(--carouselOffset) * -1);
+
+//   // height: calc(100% + (3rem * 2))
+//   // height: calc(100% + 6rem);
+//   // padding-top: calc(3rem + 1.5vw);
+//   // padding-bottom: calc(3rem + 1.5vw);
+//   // margin-bottom: 25px;
+//   // display: flex;
+//   // justify-content: stretch;
+//   // align-items: stretch;
+//   // height: calc(100% + 6rem)!important;
+//   // overflow: hidden;
+// }
+
+
+
+
+
+
+// .flickity-viewport {
+//   // background-color: magenta;
+  
+//   -webkit-mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+//           mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+//   // height: 100%!important;
+//   // --carouselOffset: 2rem;
+//   margin-top: calc(var(--carouselOffset) * -1);
+//   margin-bottom: calc(var(--carouselOffset) * -1);
+//   height: calc(100% + (var(--carouselOffset) * 2))!important;
+//   // width: 100%;
+//   // flex: 1 0 100%;
+// }
+
+// .flickity-slider {
+//   // padding-bottom: 3rem;
+// }
+
+// .flickity-page-dots {
+//   bottom: calc(var(--carouselOffset) * -1)
+// }
+
+
+
+
+// .carousel-cell {
+//   // background-image: url(#{$baseurl}/images/pricelog-screenshot-1.jpg);
+//   // background-size: cover;
+//   width: 30%;
+//   margin-top: var(--carouselOffset);
+//   margin-bottom: var(--carouselOffset);
+//   height: calc(100% - (var(--carouselOffset) * 2));
+//   margin-right: 10%;
+//   // border-radius: 10px;
+//   // padding-top: calc(3rem + 1.5vw);
+//   // padding-bottom: calc(3rem + 1.5vw);
+//   // padding-top: 71%;
+  
+  
+//   // overflow: hidden;
+
+//   object-fit: contain;
+
+//   // &:before {
+//   //   display: block;
+//   //   content: '';
+//   //   position: absolute;
+//   //   top: 5%;
+//   //   left: 10%;
+//   //   width: 80%;
+//   //   height: 95%;
+//   //   background-color: red;
+//   // }
+  
+//   img {
+//     position: absolute;
+//     top: 0;
+//     width: 100%;
+//     height: calc(100% - 1rem);
+//     object-fit: contain;
+//     filter: drop-shadow(0 .5rem 1rem rgba(color(green,dark),.5));
+//   }
+  
+//   // @media (max-width: $small) {
+//   //   width: 60%;
+//   //   padding-top: 106%;
+//   // }
+// }
+
+// .flickity-prev-next-button {
+//   background-color: white;
+  
+//   .arrow {
+//     fill: color(green,dark)
+//   }
+// }
+
+// .flickity-page-dots .dot {
+//   background: color(green,dark);
+//   transition: all .3s ease-in-out;
+  
+//   &.is-selected {
+//     background: color(green,baseContrast);
+//     box-shadow: 0 -2px 10px color(green,base)
+//   }
+// }
 
 
 // @media (max-width: 550px) {
@@ -603,7 +767,6 @@ export default {
     background: linear-gradient(to bottom, rgba(color(green,base),0) 40%, rgba(color(green,base),.5) 55%, white 75%)
   }
 }
-
 
 
 </style>

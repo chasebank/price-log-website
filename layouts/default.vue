@@ -34,11 +34,10 @@ body {
   position: relative;
   height: 100%;
   display: flex;
-  // flex-direction: column;
-  // align-content: stretch;
+  flex-direction: column;
+  align-content: stretch;
   -webkit-overflow-scrolling: touch;
   background: color(green,baseContrast);
-  // background: linear-gradient(#f2fef6 40%, color(green, dark) 60%);
 }
 
 #__nuxt,
@@ -66,13 +65,13 @@ main {
 
 
 section {
-  padding-top: calc(3rem + 1.5vw);
-  padding-bottom: calc(3rem + 1.5vw);
+  padding-top: $largePadding;
+  padding-bottom: $largePadding;
 }
 
 .section-content {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: $mediumPadding;
+  padding-right: $mediumPadding;
 }
 
 // .block-header {
@@ -206,17 +205,7 @@ section {
   }
 }
 
-@media (max-width: 1000px) {
-  .section-pitchv2 {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 
-  .section-pitchv2_content {
-    width: 100%;
-    margin-top: 3rem;
-  }
-}
 
 @media (min-width: 1000px) {
   header {
