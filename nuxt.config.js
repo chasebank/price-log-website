@@ -1,3 +1,9 @@
+const routerBase =
+  process.env.DEPLOY_ENV === "GH_PAGES"
+    ? {
+        base: "/chase/"
+      }
+    : {};
 
 export default {
   mode: "universal",
@@ -25,6 +31,10 @@ export default {
         src: "https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"
       }
     ]
+  },
+
+  router: {
+    ...routerBase,
   },
   /*
    ** Customize the progress-bar color
