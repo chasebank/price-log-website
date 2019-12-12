@@ -16,19 +16,19 @@
       <client-only>
         <flickity class="carousel" ref="flickity">
           <div class="carousel-cell">
-            <img :src="require(`../assets/images/pricelog-screenshot-1.png`)" alt="Compare prices, find great deals, shop smart and save money!">
+            <img :src="require(`../assets/images/pricelog-screenshot-1.png?disabled`)" alt="Compare prices, find great deals, shop smart and save money!">
           </div>
           <div class="carousel-cell">
-            <img :src="require(`../assets/images/pricelog-screenshot-2.png`)" alt="Organize items into custom categories unique to your shopping habbits.">
+            <img :src="require(`../assets/images/pricelog-screenshot-2.png?disabled`)" alt="Organize items into custom categories unique to your shopping habbits.">
           </div>
           <div class="carousel-cell">
-            <img :src="require(`../assets/images/pricelog-screenshot-3.png`)" alt="When you shop at Different stores, log their prices into Price Log.">
+            <img :src="require(`../assets/images/pricelog-screenshot-3.png?disabled`)" alt="When you shop at Different stores, log their prices into Price Log.">
           </div>
           <div class="carousel-cell">
-            <img :src="require(`../assets/images/pricelog-screenshot-4.png`)" alt="Price Log automatically compares prices \& finds which store is cheapest!">
+            <img :src="require(`../assets/images/pricelog-screenshot-4.png?disabled`)" alt="Price Log automatically compares prices \& finds which store is cheapest!">
           </div>
           <div class="carousel-cell">
-            <img :src="require(`../assets/images/pricelog-screenshot-5.png`)" alt="Use the Shopping List to plan your next buys!">
+            <img :src="require(`../assets/images/pricelog-screenshot-5.png?disabled`)" alt="Use the Shopping List to plan your next buys!">
           </div>
         </flickity>
       </client-only>
@@ -651,7 +651,7 @@ p:last-of-type {
 .section-contact {
   position: relative;
   background-color: color(green,base);
-  background: url(http://www.pricelogapp.com/images/pricelog-store-bg.jpg?disable=true) top right no-repeat;
+  background: url(http://www.pricelogapp.com/images/pricelog-store-bg.jpg) top right no-repeat;
 
   background-size: cover;
   padding-top: 0;
