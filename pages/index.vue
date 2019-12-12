@@ -14,23 +14,23 @@
     <!-- <img :srcset="require(`~/assets/images/${this.imageURL}?disable=true`).srcSet" alt=""> -->
     <section class="section-pitchv2">
       <client-only>
-        <div class="carousel" data-flickity='{ "wrapAround": false }'>
+        <flickity class="carousel" ref="flickity">
           <div class="carousel-cell">
-            <img src="http://www.pricelogapp.com/images/pricelog-screenshot-1.jpg" alt="">
+            <img :src="require(`../assets/images/pricelog-screenshot-1.png`)" alt="Compare prices, find great deals, shop smart and save money!">
           </div>
           <div class="carousel-cell">
-            <img src="http://www.pricelogapp.com/images/pricelog-screenshot-1.jpg" alt="">
+            <img :src="require(`../assets/images/pricelog-screenshot-2.png`)" alt="Organize items into custom categories unique to your shopping habbits.">
           </div>
           <div class="carousel-cell">
-            <img src="http://www.pricelogapp.com/images/pricelog-screenshot-1.jpg" alt="">
+            <img :src="require(`../assets/images/pricelog-screenshot-3.png`)" alt="When you shop at Different stores, log their prices into Price Log.">
           </div>
           <div class="carousel-cell">
-            <img src="http://www.pricelogapp.com/images/pricelog-screenshot-1.jpg" alt="">
+            <img :src="require(`../assets/images/pricelog-screenshot-4.png`)" alt="Price Log automatically compares prices \& finds which store is cheapest!">
           </div>
           <div class="carousel-cell">
-            <img src="http://www.pricelogapp.com/images/pricelog-screenshot-1.jpg" alt="">
+            <img :src="require(`../assets/images/pricelog-screenshot-5.png`)" alt="Use the Shopping List to plan your next buys!">
           </div>
-        </div>
+        </flickity>
       </client-only>
 
       <div class="section-content section-pitchv2_content">

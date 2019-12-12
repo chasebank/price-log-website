@@ -25,16 +25,11 @@ export default {
         content: process.env.npm_package_description || ""
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-    script: [
-      {
-        src: "https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"
-      }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
   router: {
-    ...routerBase,
+    ...routerBase
   },
   /*
    ** Customize the progress-bar color
@@ -51,7 +46,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: "~/plugins/flickity", ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */
