@@ -1,9 +1,9 @@
-const routerBase =
-  process.env.DEPLOY_ENV === "GH_PAGES"
-    ? {
-        base: "/price-log-website/"
-      }
-    : {};
+// const routerBase =
+//   process.env.DEPLOY_ENV === "GH_PAGES"
+//     ? {
+//         base: "/price-log-website/"
+//       }
+//     : {};
 
 export default {
   mode: "universal",
@@ -29,7 +29,7 @@ export default {
   },
 
   router: {
-    ...routerBase
+    // ...routerBase
   },
   /*
    ** Customize the progress-bar color
