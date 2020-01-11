@@ -1,8 +1,8 @@
 const routerBase =
   process.env.DEPLOY_ENV === "GH_PAGES"
     ? {
-        // base: "/price-log-website/"
-        base: "/"
+        base: "/price-log-website/"
+        // base: "/"
       }
     : {};
 
