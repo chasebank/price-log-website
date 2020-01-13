@@ -34,20 +34,29 @@ export default {
         property: "og:description",
         content: "A mobile app that helps you compare prices and save money!"
       },
-      { property: "og:image", content: "/thumbnail-landscape.jpg" },
-      { property: "og:image:secure_url", content: "/thumbnail-landscape.jpg" },
+      {
+        property: "og:image",
+        content: "https://pricelog.app/thumbnail-landscape.jpg"
+      },
+      {
+        property: "og:image:secure_url",
+        content: "https://pricelog.app/thumbnail-landscape.jpg"
+      },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:url", content: "http://www.pricelogapp.com" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "/thumbnail-landscape.jpg" },
+      {
+        name: "twitter:image",
+        content: "https://pricelog.app/thumbnail-landscape.jpg"
+      },
       { name: "twitter:image:alt", content: "Price Log app image" },
       { name: "twitter:site", content: "@chase_whiteside" },
       { name: "twitter:creator", content: "@chase_whiteside" }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "apple-touch-icon", href: "/icon.png" },
+      { rel: "apple-touch-icon", href: "https://pricelog.app/tile.png" },
       { rel: "shortcut icon", type: "image/x-icon", href: "/favicon.ico" }
     ]
   },
