@@ -24,9 +24,22 @@ export default {
         hid: "description",
         name: "description",
         content: process.env.npm_package_description || ""
-      }
+      },
+      { property: "og:site_name", content: "Price Log"},
+      { property: "og:title", content: "Price Log - A Journal For Your Prices"},
+      { property: "og:description", content: "A mobile app that helps you compare prices and save money!"},
+      { property: "og:image", content: "/thumbnail-landscape.jpg"},
+      { property: "og:url", content: "http://www.pricelogapp.com"},
+      { name: "twitter:card", content: "summary_large_image"},
+      { name: "twitter:image", content: "/thumbnail-landscape.jpg"},
+      { name: "twitter:image:alt", content: "Price Log app image"},
+      { name: "twitter:site", content: "@chase_whiteside"},
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", href: "/icon.png"},
+      { rel: "shortcut icon", type: "image/x-icon", href: "/favicon.ico"}
+    ]
   },
 
   router: {
