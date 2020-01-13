@@ -651,7 +651,7 @@ p:last-of-type {
 .section-contact {
   position: relative;
   background-color: color(green,base);
-  background: url(http://www.pricelogapp.com/images/pricelog-store-bg.jpg) top right no-repeat;
+  background: url(~assets/images/pricelog-store-bg.jpg) top right no-repeat;
 
   background-size: cover;
   padding-top: 0;

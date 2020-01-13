@@ -39,7 +39,7 @@ header {
       rgba(white, .5) 80%,
       #f2fef6
     ),
-    url('http://www.pricelogapp.com/images/header-bg.jpg');
+    url('~assets/images/header-bg.jpg');
   background-size: cover;
   background-position: bottom center;
   height: 105%;
