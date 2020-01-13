@@ -36,8 +36,7 @@
       <div class="section-content section-pitchv2_content">
         <h2>"A dollar saved is a dollar&nbsp;earned!"</h2>
         <p>Prices change from store to store and day to day. The differences are often small and hard to notice, but it all&nbsp;adds&nbsp;up!</p>
-        <p>Price Logs have long been useful tools for smart shoppers to find deals and save money. Now you can do this right on your phone. You log the things you buy, their prices, and where you buy them. Price Log automatically compares the prices and sorts
-          out which store has the best price for&nbsp;each&nbsp;item.</p>
+        <p>Price Logs have long been useful tools for smart shoppers to find deals and save money. Now you can do this right on your phone. You log the things you buy, their prices, and where you buy them. Price Log automatically compares the prices and sorts out which store has the best price for&nbsp;each&nbsp;item.</p>
         <p>You'll have a personalized guide to help you find deals and plan your next shopping&nbsp;trip.</p>
       </div>
     </section>
@@ -207,14 +206,17 @@ p:last-of-type {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  
+  // disable normal padding
+  padding-top: 0;
 }
 
 .carousel {
-  flex: 2;
+  flex: 1 1 50%;
   max-width: 30rem;
-  // margin-left: 2%;
-  // margin-right: 2%;
-  margin: $mediumPadding 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: $largePadding;
 }
 
 .flickity-page-dots {
@@ -293,10 +295,10 @@ p:last-of-type {
 }
 
 .section-pitchv2_content {
-  flex: 1 1 50%;
-  max-width: 30rem;
-  // width: 50%;
+  flex: 1 0 50%;
+  max-width: 42rem;
   color: color(green, dark);
+  margin-top: $largePadding;
 
   p:first-of-type {
     margin-top: 0;
@@ -320,9 +322,9 @@ p:last-of-type {
     flex: none;
   }
 
-  .carousel-cell {
-    margin-bottom: 3.2rem;
-  }
+  // .carousel-cell {
+  //   margin-bottom: 3.2rem;
+  // }
 
   // .section-pitchv2_content {
   //   width: 100%;
