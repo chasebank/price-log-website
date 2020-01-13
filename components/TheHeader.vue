@@ -143,7 +143,7 @@ $phoneMockupHeight: 30rem;
 }
 
 .phone-screen {
-  background: url('http://www.pricelogapp.com/images/app-screenshot.jpg');
+  background: url('~assets/images/app-screenshot.jpg?disable=true');
   background-size: 100% 100%;
   position: absolute;
   top: 2.7%;
