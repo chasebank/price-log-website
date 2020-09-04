@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0",
     "nuxt-responsive-loader": "^1.0.4",
