@@ -40,16 +40,13 @@ footer {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  padding-left: 12%;
-  padding-right: 12%;
   
   a {
     position: relative;
     display: flex;
     align-items: center;
     height: 70%;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-right: calc(var(--scrollbarWidth) / 2);
   }
   
   svg {
@@ -62,14 +59,6 @@ footer {
       max-width: 12rem;
     }
   }
-}
-
-#app-store-badge {
-
-}
-
-#google-play-badge {
-
 }
 
 #mobile-scroll-hint {

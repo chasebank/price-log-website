@@ -23,6 +23,10 @@ export default {
   components: {
     PriceLogLogo,
   },
+
+  mounted() {
+    document.documentElement.style.setProperty('--scrollbarWidth', `${document.scrollingElement.clientWidth - this.$el.clientWidth}px`)
+  }
 }
 </script>
 
@@ -71,6 +75,7 @@ header {
   padding-top: 2rem;
   min-height: 8rem;
   flex: 2;
+  // flex: none;
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -157,6 +162,33 @@ $phoneMockupHeight: 30rem;
   mix-blend-mode: multiply;
 }
 
+@media (min-width: 1000px) {
+  header {
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
 
+  .logo-wrap {
+    padding-top: 0;
+    flex: none;
+  }
 
+  .phone-wrap {
+    height: 100%;
+    width: auto;
+    flex: none;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .phone {
+    position: relative;
+    top: initial;
+    right: 5%;
+    bottom: 0;
+    transform: translateX(20%);
+  }
+}
 </style>

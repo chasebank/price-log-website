@@ -121,108 +121,62 @@ section {
     }
   }
 }
+</style>
 
+<style lang="scss" scoped>
+::v-deep {
+  @media (max-width: $small) {
+    .section-process {
+      background: linear-gradient(
+        to bottom,
+        color(green, baseContrast),
+        color(green, base)
+      );
+    }
+    .section-process_section-content {
+      flex-direction: column;
+      padding-left: 5%;
+      padding-right: 5%;
 
+      h2 {
+        font-size: 1.5em;
+        max-width: 100%;
+        margin-top: 0;
+        left: 0;
 
-@media (max-width: $small) {
-  .section-process {
-    background: linear-gradient(
-      to bottom,
-      color(green, baseContrast),
-      color(green, base)
-    );
-  }
-  .section-process_section-content {
-    flex-direction: column;
-    padding-left: 5%;
-    padding-right: 5%;
+        &:after {
+          display: none;
+        }
+      }
 
-    h2 {
-      font-size: 1.5em;
-      max-width: 100%;
-      margin-top: 0;
-      left: 0;
-
-      &:after {
-        display: none;
+      .block-process {
+        width: 100%;
       }
     }
 
-    .block-process {
-      width: 100%;
+    .app-download-badges {
+      padding-left: 1%;
+      padding-right: 1%;
     }
   }
 
-  .app-download-badges {
-    padding-left: 1%;
-    padding-right: 1%;
-  }
-}
+  @media (min-width: $small) {
+    .section-tagline {
+      .section-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
 
+      h2 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
 
-
-@media (min-width: 1000px) {
-  header {
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-  }
-
-  .logo-wrap {
-    padding-top: 0;
-    flex: 2;
-  }
-
-  .phone-wrap {
-    // width: 40%;
-    height: 100%;
-  }
-
-  .phone {
-    top: initial;
-    right: 5%;
-    bottom: 0;
-    transform: translateX(20%);
-  }
-}
-
-@media (min-width: 1200px) {
-  header {
-    justify-content: center;
-  }
-
-  .logo-wrap {
-    flex: none;
-  }
-
-  .phone-wrap {
-    width: auto;
-    flex: none;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  .phone {
-    position: relative;
-  }
-}
-
-@media (min-width: $small) {
-  .section-tagline {
-    .section-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    h2 {
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
-
-    h3 {
-      margin-top: .2rem;
+      h3 {
+        margin-top: .2rem;
+      }
     }
   }
 }

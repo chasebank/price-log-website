@@ -15,13 +15,13 @@
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0",
     "nuxt-responsive-loader": "^1.0.4",
     "push-dir": "^0.4.1",
     "sass-loader": "^8.0.0",
-    "sharp": "^0.23.3",
+    "sharp": "^0.28.3",
     "vue-flickity": "^1.2.1",
     "vue-meta": "^2.3.1"
   },
