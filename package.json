@@ -21,7 +21,7 @@
     "nuxt-responsive-loader": "^1.0.4",
     "push-dir": "^0.4.1",
     "sass-loader": "^8.0.0",
-    "sharp": "^0.28.3",
+    "sharp": "^0.30.5",
     "vue-flickity": "^1.2.1",
     "vue-meta": "^2.3.1"
   },
